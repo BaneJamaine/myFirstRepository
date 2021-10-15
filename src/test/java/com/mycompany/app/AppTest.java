@@ -45,9 +45,9 @@ public class AppTest
     {
         App.main(null);
         try {
-            assertTrue(outContent.toString().length() <= 10);
+            assertTrue(outContent.toString().length() > 10);
         } catch (AssertionError e) {
-            fail("Lenght of \"message\" is greater than 10");
+            fail("Lenght of \"message\" is smaller than 10");
         }
     }
 
