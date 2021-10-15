@@ -40,6 +40,17 @@ public class AppTest
         }
     }
 
+    @Test
+    public void testTextLength()
+    {
+        App.main(null);
+        try {
+            assertTrue(outContent.toString().length() <= 10);
+        } catch (AssertionError e) {
+            fail("Lenght of \"message\" is greater than 10");
+        }
+    }
+
     @After
     public void cleanUpStreams() {
         System.setOut(null);
